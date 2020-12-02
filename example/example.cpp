@@ -48,7 +48,7 @@ void enumerateExamples() {
     std::cout << std::endl;
 
     // Enumerate a const lvalue reference starting with 0
-    std::vector<int> const_vec{ 1,2,3 };
+    const std::vector<int> const_vec{ 1,2,3 };
     std::cout << "Should print (0,1)(1,2)(2,3)" << std::endl << "             ";
     for (auto&& [index, value] : enumerate{ const_vec }) {
         std::cout << "(" << index << "," << value << ")";
@@ -138,9 +138,7 @@ int main() {
     std::cout << "Beginning examples:" << std::endl << std::endl;
 
     rangeExamples();
-
     enumerateExamples();
-
     zipExamples();
 
     return 0;
